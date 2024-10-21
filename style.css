@@ -508,11 +508,9 @@ h2.tow{
     color: darkgray;
     font-family: 'Nunito', cursive ;
 }
-.menu-content .menu-1, .menu-content .menu-2, .menu-content .menu-3{
-    display: none;
-}
+ 
 .menu-content > .active{
-    display: block;
+    display: grid;
 }
 
 

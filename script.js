@@ -11,7 +11,7 @@ function dropdownMenu(){
 
 function navBorder() { 
   let items = document.getElementsByClassName('item');
-  let menus = document.querySelectorAll('.menu-1, .menu-2, .menu-3'); // Use a selector for the specific menu classes
+  let menus = document.getElementsByClassName('menu'); 
 
   for (let i = 0; i < items.length; i++) {
     items[i].addEventListener('click', (function(index) {
@@ -21,9 +21,9 @@ function navBorder() {
           items[j].classList.remove("nav-border");
           menus[j].style.display = "none";
         }
-        // Add 'nav-border' to the clicked item
+        
         this.classList.add("nav-border");
-        menus[index].style.display = "block"; // Show the corresponding menu
+        menus[index].style.display = "grid"; 
       };
     })(i));
   }
