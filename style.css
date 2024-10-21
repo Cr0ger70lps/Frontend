@@ -105,6 +105,7 @@ nav.navbar .row{
     color: white ;
     font-family: 'Nunito' ,cursive;
     text-decoration: none;
+    font-size: 1.4em;
    
 }
 .text-white h1{
@@ -192,95 +193,82 @@ nav.navbar .row{
 /*==========*/
 
 
-/*=========================about section========================*/
+/*=========================about section====================*/
 .about-container{
     width: 100%;
-    height: 640px;
-    display: flex;
-    align-items: center;
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas: 'left-side right-side';
+    margin-top: 40px;
 }
-.about-container .row{
-    display: block;  
-    width: 100%;
-    height: 504px;
-    position: relative;
-}
-/*-------------left-side-----------------*/
 .left-side{
-width: 50%;
-height: 100%;
-display: block;
-position: absolute;
-top: 0;
-left: 0;
-padding-left: 5%;
-padding-right: 5%;
-}
+   
 
-.left-side-interieur{
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-.img-box{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-}
-.img-box img{
-    border-radius: 5px;
-}
-.img-box-1{
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    top: 0;
-    right: 254px;
-}
-.img-box-2{
-    width: 190px;
-    height: 190px;
-    position: absolute;
-    top: 60px;
-    right: 60px;
-}
-.img-box-3{
-    width: 190px;
-    height: 190px;
-    position: absolute;
-    top: 254px;
-    right: 254px;
-}
-.img-box-4{
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    right: 0px;
-    top: 254px;
-}
-/*-------------left-side-end-----------------*/
-
-/*---------------right-side---------------*/
-.right-side{
-    display: block;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 40px 25px;
+    display: grid;
+    grid-template-rows:1fr;
+    grid-template-columns:1fr 1fr;
+    padding: auto;  
+    padding-left: 20%; 
    
 }
-.about-title{
-    color: #feaf39;
-    font-family: 'Pacifico' , cursive;
-    position: relative;
-    font-size: 20px;
-    width: max-content;
+.row-1{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
 }
-
-.about-title::after{
+.row-2{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+.img-1{
+    width: 214px;
+    height: 214px;
+    border-radius: 8px;
+   
+}
+.img-2{
+    width: 165px;
+    height: 165px;
+    margin-top: 49px;
+    border-radius: 8px;
+}
+.img-3{
+    width: 165px;
+    height: 165px;
+    margin-left: 49px;
+    margin-top: 6px;
+    border-radius: 8px;
+}
+.img-4{
+    width: 214px;
+    height: 214px;
+    margin-top: 6px;
+    border-radius: 8px;
+}
+.right-side{
+    
+    display: grid;
+    padding: 0 20px;
+    grid-template-rows: 
+    'title-1'
+    'subtitle'
+    'paragraph'
+    'exp-box'
+    'read-btn';
+    
+}
+.right-side .title-1{
+    font-family: 'Pacifico', cursive;
+    color: var(--primary);
+    width: max-content;
+    position: relative;
+}
+.title-1 h3{
+ margin-bottom: 0;
+}
+.right-side .title-1::after{
     position: absolute;
     content: "";
     width: 45px;
@@ -290,69 +278,55 @@ padding-right: 5%;
     margin-top: -1px;
     background: var(--primary);
 }
-.sub-title{
-    font-family: 'Nunito', cursive;
-    font-weight: 900;
-    font-size: 24px;
-  
-}
-.sub-title h1{
-    margin: 10px 0;
-}
-.about-paragraph{
+ .right-side .subtitle{
+    margin: 0;
+    height: auto;
+ }
+ .paragraph {
+    line-height: 1.3;
+    font-size: 1.2em;
+    font-family: "Nunito ", cursive;
     color: gray;
-    font-size: 18px;
-    font-family: sans-serif;
-    line-height: 1.4;
-}
-.year{
+ }
+ .paragraph p{
+    margin: 0;
+   
+ }
+ .exp-box{
     display: flex;
     flex-direction: row;
-    border-left: 5px solid #feaf39;
-    padding: 0;
-    margin: 15px 0;
-}
-.year h1 ,p {
+    gap: 15px;
+ }
+ .exp-box *{
     margin: 0;
-}
-h1.exp-years{
-    color: #feaf39;
-    font-family: sans-serif;
-    font-size: 42px;
-    padding:  6px 20px ;
-}
-.year p{
-    padding-top: 6px;
-    line-height: 1.2;
+ }
+ .exp{
+    color: var(--primary);
+    font-family: cursive;
+    font-size: 2.5rem;
+    border-left: 5px solid #feaf39;
+    height: max-content;
+    padding-left: 8px;
+ }
+ .exp-box p{
     color: gray;
-    font-family: sans-serif;
-}
-.year p > b{
-    color: black !important;
-}
-.read{
-    margin: 20px 0;
-}
-.read .read-btn{
-    padding: 12px 18px;
-    background-color: #feaf39;
-    border: 2px solid #feaf39;
-    border-radius: 4px;
-}
-.read .read-btn a{
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-
-/*--------------right-side-end---------------*/
+    padding-top: 10px;
+ }
+ .btn-2{
+    margin-top: 10px;
+  padding: 10px 25px;
+  background-color: #feaf39;
+  border: 1px solid #feaf39;
+  border-radius: 4px;
+  
+ }
+ 
 /*--------------------------about-section-end---------------------------*/
 /*---------------------------Menu---------------------------*/
 .menu-container{
     width: 100%;
     height: 600px;
-    margin: 0;
+    margin: 30px 0;
     
 }
 .menu-subcontainer{
@@ -508,7 +482,9 @@ h2.tow{
     color: darkgray;
     font-family: 'Nunito', cursive ;
 }
- 
+ .menu{
+    display: none;
+ }
 .menu-content > .active{
     display: grid;
 }
@@ -596,45 +572,28 @@ h2.tow{
     margin: 10px;
     width: calc(100% - 20px );
    }
-    /**--------------------about--------------------------*/
-   .about-container .row .left-side{
-    width: 100%;
-    position: relative;
+   
+   .about-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'left-side'
+    'right-side';
    }
-   .left-side-interieur{
-    display: block;
-    width: 75%;
-    margin: 0 22.5%;
-   }
-   .img-box-1 ,.img-box-4{
-    width: 220px;
-    height: 220px;
+   .left-side{
+    padding-left: 5%;
    }
    
-   .img-box-2 , .img-box-3{
-    width: 160px;
-    height: 160px;
+
+   .menu-body{
+    grid-template-columns: 1fr;
    }
-   .img-box-1 {
-    top: 0;
-    right: 224px;
-   }
-   .img-box-3{
-    top: 224px;
-    right: 224px;
-   }
-   .img-box-4 {
-    top: 224px;
+   .text-row p {
+    font-size: 10px;
    }
 
 
-
-
-
-   .about-container .row .right-side{
-    width: 100%;
-    position: relative;
-   }
 
 
 
