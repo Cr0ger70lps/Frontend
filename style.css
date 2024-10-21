@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 :root{
     --primary: #f4b73e;
@@ -49,7 +49,7 @@ nav.navbar{
     background-color: transparent;
     position: absolute;
     top: 0;
-    left: 20px;
+    left: 0;
     padding: 25px 0;
     box-sizing: content-box;
 
@@ -274,9 +274,10 @@ padding-right: 5%;
 }
 .about-title{
     color: #feaf39;
-    font-family: 'Caveat' , cursive;
+    font-family: 'Pacifico' , cursive;
     position: relative;
     font-size: 20px;
+    width: max-content;
 }
 
 .about-title::after{
@@ -285,7 +286,7 @@ padding-right: 5%;
     width: 45px;
     height: 2px;
     top: 50%;
-    left: 65px;
+    right: -55px;
     margin-top: -1px;
     background: var(--primary);
 }
@@ -347,17 +348,175 @@ h1.exp-years{
 
 /*--------------right-side-end---------------*/
 /*--------------------------about-section-end---------------------------*/
-
 /*---------------------------Menu---------------------------*/
+.menu-container{
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    
+}
+.menu-subcontainer{
+    width: 80%;
+    height: 100%;
+    
+    display: block;
+    margin: 0 auto;
+}
+.title-container{
+    text-align: center !important;
+    width: 100%;
+   
+}
+.title::before{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    left: -55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
+.title{
+    font-family: 'Pacifico', cursive;
+    color: var(--primary);
+    width: max-content;
+    margin: auto;
+    position: relative;
+      
+}
+.title::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    right: -55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
+.subtitle{
+    font-family: 'Nunito',cursive;
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 2.3rem;
+}
+/*----------------------menu - navbar----------------------*/
+.menu-nav{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    padding: 0;
+    
+}
+.menu-nav-list{
+    width: max-content;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin: auto;
+    justify-content: center;
+    
+    cursor: pointer;
+}
+.menu-nav-list > .nav-border{
+    border-bottom: 2px solid var(--primary) !important;
+}
+.menu-nav-list .item{
+    width: max-content;
+    height: 100%;
+    list-style: none;
+    
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+} 
+.fa-solid{
+    width: 40%;
+     display: block;
+     color: #feaf39;
+     margin: 10px;
+     padding: 0;  
+}
+.fa-mug-saucer,.fa-utensils, .fa-burger{
+    font-size: 2em;
+}
+.item p{
+    width: 60%;
+    display: block;
+    font-family: sans-serif;
+    color: gray;   
+}
+p> b{
+    color: black;
+}
+
+/*----------------------menu - body --------------------------------*/
+.menu-body{
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px;
+}
+
+.column-1 .row, .column-2 .row{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     height: 80px;
+     position: relative;
+     margin: 5px 0;
+}
+ .column-1 .row .img-box , .column-2 .row .img-box{
+    width: 80px;
+    height: auto;
+    position: absolute;
+    left: 0;
+    
+}
+.row .text-row{
+  width: calc(100% - 100px);
+  height: 50%;
+  position: absolute;
+  left: 90px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+}
+.row-one{
+    top: 0;
+}
+.row-tow{
+    bottom: 0;
+    border: none !important;
+}
+.row .text-row h2{
+    display: inline;
+    margin: 0;
+    font-family: 'Nunito' , cursive;
+}
+h2.tow{
+ color: var(--primary);
+}
+.text-row p {
+    color: darkgray;
+    font-family: 'Nunito', cursive ;
+}
+.menu-content .menu-1, .menu-content .menu-2, .menu-content .menu-3{
+    display: none;
+}
+.menu-content > .active{
+    display: block;
+}
 
 
-
-
-
-
-
-
-
+/*--------------------------Menu-section-end---------------------------*/
 @media  (max-width:860px){
 
     /*------------------------Navbar-------------------------*/
