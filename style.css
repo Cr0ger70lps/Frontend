@@ -38,10 +38,11 @@ body{
     position: absolute; left: 30px;}
 nav.navbar{
     width: 100%;
-   
-    position: absolute;
+   background-color: var(--dark);
+    position: fixed;
     top: 0;left: 0;
     padding: 25px 0;box-sizing: content-box;
+    z-index: 999;
 }
 nav.navbar .row{
     width: 100%;
@@ -143,7 +144,7 @@ nav.navbar .row{
     border-radius: 8px;
     position: relative;
     background-color: white;
-    font-family: monospace, sans-serif;
+    font-family: 'Nunito', cursive;
 }
 
 @property --angle{
@@ -154,13 +155,11 @@ nav.navbar .row{
 .box::after,
 .box::before{
    content: '';
-   background-color: red;
    position: absolute;
    width: 100%;
    height: 100%;
    left: 100%;
    border-radius: 8px;
-   --angle: 0deg;
    background-image: conic-gradient(
        from var(--angle) , var(--primary) , var(--primary) , var(--dark) 
    );
@@ -173,11 +172,7 @@ nav.navbar .row{
 }
 .box::after{
    filter: blur(10px);
- 
 }
-
-
-
 
 @keyframes autoRotate{
    to {
@@ -972,5 +967,8 @@ input:invalid:not(:placeholder-shown){
 .maps{
     width: 100%;
     margin: 40% 0;
+}
+.name-box , .email-box , .Date-time-box , .people-box{
+    width: 100%;
 }
 }

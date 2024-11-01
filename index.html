@@ -20,7 +20,7 @@
     ></script>
   </head>
   <body>
-    <div class="hero-container">
+    <div class="hero-container" id="home">
       <!--=================================nav===================================-->
       <nav class="navbar">
         <div class="row">
@@ -30,15 +30,19 @@
               href="javascript:void(0);"
               onclick="dropdownMenu()"
               class="text-white nav-icon"
-              >-||||-<i class="fa-solid fa-bars " style="font-size: 38px;color: white;"></i></a>
-            <a href="" class="activ">Home</a>
-            <a href="">About</a>
-            <a href="">Service</a>
-            <a href="">Menu</a>
-            <a href="">Testimonial</a>
-            <a href="">Contact</a>
+              ><i
+                class="fa-solid fa-bars"
+                style="font-size: 38px; color: white"
+              ></i
+            ></a>
+            <a href="#home" class="activ">Home</a>
+            <a href="#about">About</a>
+            <a href="#service">Service</a>
+            <a href="#menu">Menu</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#Contact">Contact</a>
             <button class="nav-btn">
-              <a href="#" class="text-white">Book A Table</a>
+              <a href="#booking" class="text-white">Book A Table</a>
             </button>
           </div>
         </div>
@@ -61,7 +65,7 @@
     </div>
     <!--hero-container-->
     <!--==========================service section===========================-->
-    <div class="service-container">
+    <div class="service-container" id="service">
       <div class="row">
         <div class="col-4">
           <div class="box">
@@ -76,30 +80,29 @@
         </div>
         <div class="col-4">
           <div class="box">
-            <img src="./icons/fork-and-knife.png" alt="" />
-            <h1>Food Quality</h1>
+            <img src="./icons/add-to-cart.png" alt="" />
+            <h1>Online Reservation</h1>
             <p>
-              We use only the freshest ingredients, ensuring every dish is both
-              flavorful and nutritious. Each meal is crafted with care to
-              deliver exceptional taste.
+              Online reservations offer a quick and convenient way to secure
+              your dining experience. With just a few clicks, you can choose
+              your date and time.
             </p>
           </div>
         </div>
         <div class="col-4">
           <div class="box">
-            <img src="./icons/fork-and-knife.png" alt="" />
-            <h1>Food Quality</h1>
+            <img src="./icons/call-center-service.png" alt="" />
+            <h1>Online Assistance</h1>
             <p>
-              We use only the freshest ingredients, ensuring every dish is both
-              flavorful and nutritious. Each meal is crafted with care to
-              deliver exceptional taste.
+              online assistance provides immediate support and answers to your questions. Whether you need help with reservations,
+               menu inquiries, orspecial requests.
             </p>
           </div>
         </div>
       </div>
     </div>
     <!-- =============================About section=================================-->
-    <div class="about-container">
+    <div class="about-container" id="about">
       <div class="left-side">
         <div class="left-side-lob">
           <div class="row-1">
@@ -139,7 +142,7 @@
     </div>
     <!--------------------------Menu - section ------------------------------->
 
-    <div class="menu-container">
+    <div class="menu-container" id="menu">
       <div class="menu-subcontainer">
         <div class="title-container">
           <h3 class="title">Menu</h3>
@@ -635,7 +638,7 @@
       </div>
     </div>
     <!--------------------------Booking - section ------------------------------->
-    <div class="booking-container">
+    <div class="booking-container" id="booking">
       <div class="booking-subcontainer">
         <div class="map-left">
           <iframe
@@ -700,7 +703,7 @@
       </div>
     </div>
     <!-- ------------------------------Testamonail - section ---------------------->
-    <div class="test-section">
+    <div class="test-section" id="testimonials">
       <div class="test-container">
         <div class="title-area">
           <h2 class="title-1">Testimonials</h2>
@@ -765,12 +768,12 @@
           </div>
         </div>
         <div class="btn-box">
-          <button class="btn-2" type="button" href="">Read More</button>
+          <button class="btn-2" ><a  href="www.tripadviser.com/sam'cake" target="_blank">Read More</a></button>
         </div>
       </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" id="Contact">
       <div class="footer-row">
         <div class="footer-col">
           <h2>Company</h2>
@@ -823,7 +826,7 @@
             >
             <div class="input-box">
               <input type="text" placeholder="Your email" />
-              <button class="subscribe-btn">SUBSCRIBE</button>
+              <button class="subscribe-btn"><a href="">SUBSCRIBE</a></button>
             </div>
           </div>
         </div>
